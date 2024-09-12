@@ -2,7 +2,7 @@
 
 Jianpu in Lilypond, from http://ssb22.user.srcf.net/mwrhome/jianpu-ly.html
 
-(also mirrored at http://ssb22.gitlab.io/mwrhome/jianpu-ly.html just in case)
+(also mirrored at http://ssb22.gitlab.io/mwrhome/jianpu-ly.html just in case, and available via `pip install jianpu-ly` or `pipx run jianpu-ly`)
 
 jianpu-ly is a Python program (compatible with both Python 2 and Python 3) that assists with printing jianpu (numbered musical notation) in the GNU Lilypond music typesetter. The jianpu is written on a modiﬁed-appearance “stave” in Lilypond, which means Lilypond’s typesetting capabilities (lyric spacing, slurs, beams etc) will apply to the jianpu without needing to add a 5-line stave. If you prefer, the generated code for the jianpu stave may also be placed in a score with other types of stave.
 
@@ -22,6 +22,8 @@ Accidentals: `1 #1 2 b2 1`
 Octaves: `1,, 1, 1 1' 1''`
 
 Shortcuts for 1' and 2': `8 9`
+
+Change base octave: `< >`
 
 Semiquaver, quaver, crotchet (16/8/4th notes): `s1 q1 1`
 
@@ -55,6 +57,10 @@ Hanzi lyrics (auto space): `H: hanzi` (with or without spaces)
 
 Lilypond headers: `title=the title` (on a line of its own)
 
+Guitar chords: `chords=c2. g:7 c` (on own line)
+
+Fret diagrams: `frets=guitar` (on own line)
+
 Multiple parts: `NextPart`
 
 Instrument of current part: `instrument=Flute` (on a line of its own)
@@ -64,6 +70,10 @@ Multiple movements: `NextScore`
 Prohibit page breaks until end of this movement: `OnePage`
 
 Suppress bar numbers: `NoBarNums`
+
+Suppress first-line indent: `NoIndent`
+
+Ragged last line: `RaggedLast`
 
 Old-style time signature: `SeparateTimesig 1=C 4/4`
 
@@ -106,6 +116,8 @@ Other 1-word Lilypond \ commands: `\fermata \> \! \( \) etc`
 Text: `^"above note" _"below note"`
 
 Other Lilypond code: `LP: (block of code) :LP` (each delimeter at start of its line)
+
+Unicode approximation instead of Lilypond: `Unicode`
 
 Ignored: `% a comment`
 
